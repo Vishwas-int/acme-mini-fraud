@@ -1,9 +1,9 @@
 package com.acmemini.fraud;
 
-/** Scores a payment by its amount: above 50,000 scores 90 (rejected, the limit is 70); since 1.1.0 a middle band
+/** Scores a payment by its amount: above 50,000 scores 90 (rejected, the limit is 75); since 1.1.0 a middle band
  *  above 20,000 and up to 50,000 scores 60 (accepted, but shown to the fraud team); anything else scores 10. */
 public class FraudRule {
-    public static final int REJECT_AT = 70;
+    public static final int REJECT_AT = 75;
 
     public int score(long amount) {
         if (amount > 50_000) {
